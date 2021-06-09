@@ -33,7 +33,7 @@ stores.head()
 sales.head()
 
 sales.info()
-stores.describe()
+stores.info()
 features.info()
 #
 features['Date'] = pd.to_datetime(features['Date'])
@@ -59,6 +59,7 @@ print(su_galutinis.isnull().mean()*100)
 
 # daugiau nei 64 proc. Null reikšmių.
 
+# DIAGRAMOS
 
 pd.DataFrame(su_galutinis.dtypes, columns=['Type'])
 
@@ -128,7 +129,7 @@ plt.show()
 scatter(su_galutinis, 'Unemployment')
 plt.show()
 
-# Daugiausiai pardavimų būna kuomet nedarbingumo lygis yra nuo 6 iki 9.
+# Daugiausiai pardavimų būna kuomet nedarbingumo lygis yra nuo 6 iki 9, tačiau ir tai nėra labai pastebima.
 
 scatter(su_galutinis, 'Temperature')
 plt.show()
@@ -192,4 +193,4 @@ print(lm.intercept_)
 print(lm.score(xTest, yTest))
 plt.show()
 
-# Stebint linijinę regresiją su Temperatūros, Kuro kainom ir nedarbingumu matosi, kad nėra tiesioginio ryšio su pardavimais.
+# Stebint linijinę regresiją su Temperatūros, Kuro kainom ir nedarbingumu pastebėta, kad nėra tiesioginio ryšio su pardavimais.
